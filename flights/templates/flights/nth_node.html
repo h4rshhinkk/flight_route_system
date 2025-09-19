@@ -1,8 +1,18 @@
-<form method="get">
+{% comment %} <form method="get">
     Airport Code: <input name="airport">
     N: <input name="n" type="number">
     Direction:
     <select name="direction"><option>left</option><option>right</option></select>
     <button type="submit">Search</button>
 </form>
-{% if result %}<p>{{ result }}</p>{% endif %}
+{% if result %}<p>{{ result }}</p>{% endif %} {% endcomment %}
+
+<h2>Nth Node</h2>
+<form method="get">
+    Root code: <input name="root">
+    N: <input name="n" type="number">
+    Direction:
+    <select name="direction"><option>left</option><option>right</option></select>
+    <button type="submit">Find</button>
+</form>
+{% if result %}<p>Found: {{ result.code }}</p>{% endif %}

@@ -1,6 +1,22 @@
-<form method="get">
+{% comment %} <form method="get">
     From: <input name="departure">
     To: <input name="arrival">
     <button type="submit">Find Shortest</button>
 </form>
-{% if route %}<p>{{ route }}</p>{% endif %}
+{% if route %}<p>{{ route }}</p>{% endif %} {% endcomment %}
+
+
+<h2>Shortest Path Between Two Airports</h2>
+<form method="get">
+    From: <input name="src">
+    To: <input name="dest">
+    <button type="submit">Find</button>
+</form>
+{% if path %}
+    <p>Duration: {{ duration }} mins</p>
+    <p>Path:
+        {% for n in path %}
+            {{ n.code }}{% if not forloop.last %} → {% endif %}
+        {% endfor %}
+    </p>
+{% endif %}

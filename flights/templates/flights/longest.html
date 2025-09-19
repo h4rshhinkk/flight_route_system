@@ -1,2 +1,10 @@
-<h2>Longest Route</h2>
-{% if route %}{{ route }}{% else %}No data{% endif %}
+{% comment %} <h2>Longest Route</h2>
+{% if route %}{{ route }}{% else %}No data{% endif %} {% endcomment %}
+
+
+<h2>Longest Duration Path</h2>
+{% if node %}
+    <p>Node: {{ node.code }} | Total Duration: {{ duration }} mins</p>
+{% else %}
+    <p>No data</p>
+{% endif %}
